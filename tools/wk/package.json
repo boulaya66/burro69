@@ -1,0 +1,43 @@
+{
+  "name": "yarn-wk-commands",
+  "description": "Add yarn workspaces commands",
+  "version": "0.1.0",
+  "license": "MIT",
+  "author": "Philippe Gensane",
+  "keywords": [
+    "yarn",
+    "monorepo",
+    "workspaces"
+  ],
+  "main": "dist/wk.js",
+  "module": "dist/wk.mjs",
+  "esmodule": "dist/wk.mjs",
+  "source": "src/cli.mjs",
+  "bin": {
+    "wk": "dist/wk.mjs"
+  },
+  "scripts": {
+    "wk": "node src/cli.mjs",
+    "wk:i": "echo Install $INIT_CWD && yarn global add file:$INIT_CWD",
+    "wk:wi": "echo Install %INIT_CWD% && yarn global add file:%INIT_CWD%",
+    "lint": "eslint src/**/*",
+    "build": "microbundle -f cjs,modern --target node --no-sourcemap --raw --no-compress --external none"
+  },
+  "files": [
+    "src/",
+    "dist/",
+    "tests/"
+  ],
+  "preferGlobal": true,
+  "dependencies": {},
+  "devDependencies": {
+    "@burro69/helpers": "0.1.0",
+    "@burro69/logger": "0.1.0",
+    "chalk": "^4.1.0",
+    "chokidar": "^3.4.3",
+    "micromatch": "^4.0.2",
+    "sade": "^1.7.4",
+    "upath": "^2.0.1"
+  },
+  "peerDependencies": {}
+}

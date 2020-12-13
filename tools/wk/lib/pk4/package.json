@@ -1,0 +1,9 @@
+{
+  "name": "pk4",
+  "version": "0.0.0",
+  "main": "dist/pk4.js",
+  "source": "src/index.js",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {}
+}

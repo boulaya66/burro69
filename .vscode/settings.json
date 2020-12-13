@@ -55,6 +55,7 @@
     "tcxfunctions",
     "timeseries",
     "typedefs",
+    "upath",
     "usestore",
     "withdefercommit",
     "xpreact",

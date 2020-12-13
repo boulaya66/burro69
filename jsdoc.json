@@ -3,7 +3,8 @@
         "include": [
             "src/lib/helpers/src",
             "src/lib/logger/src",
-            "src/lib/sadex/src"
+            "src/lib/sadex/src",
+            "src/app/tcx/src"
         ],
         "includePattern": ".+\\.(m)?js(doc|x)?$",
         "_excludePattern": "(node_modules/|doc|tests|data)"
