@@ -1,0 +1,25 @@
+{
+    "bundle": {
+        "default": {
+            "name": "js-build",
+            "output": "dist/${config}${format}"
+        },
+        "lib": {
+            "entry": "src/lib.mjs",
+            "output": "dist/lib$3"
+        },
+        "cli": {
+            "entry": "src/cli.mjs",
+            "format": "cjs",
+            "external": "@fork/microbundle,nexe",
+            "output": "dist/cli.js"
+        }
+    },
+    "build": {
+        "default": {
+            "input": "dist/cli.js",
+            "output": "dist/jsb",
+            "name": "jsb"
+        }
+    }
+}

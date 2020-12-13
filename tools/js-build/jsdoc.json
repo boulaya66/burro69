@@ -1,0 +1,10 @@
+{
+    "source": {
+        "includePattern":"(\\.js|\\.mjs)$"
+    },
+    "sourceType": "module",
+    "opts": {
+        "destination": "doc",
+        "recurse": true
+    }
+}

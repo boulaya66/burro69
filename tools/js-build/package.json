@@ -1,0 +1,65 @@
+{
+  "name": "js-build",
+  "version": "0.1.0",
+  "description": "Cli app template",
+  "author": "Philippe Gensane",
+  "license": "MIT",
+  "main": "dist/lib.js",
+  "module": "dist/lib.mjs",
+  "esmodule": "dist/lib.mjs",
+  "source": "src/lib.mjs",
+  "bin": {
+    "jsb": "dist/cli.js"
+  },
+  "scripts": {
+    "jsb": "node src/cli.mjs",
+    "lint": "eslint src/**/*.mjs",
+    "bundle:linux": "yarn bundle && dos2unix dist/cli.js",
+    "bundle": "yarn bundle:libcjs && yarn bundle:libmjs && yarn bundle:cli",
+    "bundle:libcjs": "microbundle -i src/lib.mjs -o dist/lib.js -f cjs --target node --no-sourcemap --raw --no-compress",
+    "bundle:libmjs": "microbundle -i src/lib.mjs -o dist/lib.mjs -f modern --target node --no-sourcemap --raw --no-compress",
+    "bundle:cli": "microbundle -i src/cli.mjs -o dist/cli.js -f cjs --target node --no-sourcemap --raw --no-compress --external @fork/microbundle,nexe",
+    "build": "yarn build:win && yarn build:linux",
+    "build:win": "nexe -i dist/cli.js -o dist/jsb -t windows-x64-14.5.0 --fake-argv cli.js --name jsb",
+    "build:linux": "nexe -i dist/cli.js -o dist/jsb -t linux-x64-12.16.2 --fake-argv cli.js --name jsb",
+    "doc": "jsdoc src/cli.mjs src/lib.mjs -c jsdoc.json"
+  },
+  "files": [
+    "src/",
+    "dist/",
+    "jsdoc.json"
+  ],
+  "preferGlobal": true,
+  "bundle": {
+    "default": {
+      "name": "js-build",
+      "output": "dist/${config}${format}"
+    },
+    "lib": {
+      "entry": "src/lib.mjs",
+      "output": "dist/lib$3"
+    },
+    "cli": {
+      "entry": "src/cli.mjs",
+      "format": "cjs",
+      "external": "@fork/microbundle,nexe",
+      "output": "dist/cli.js"
+    }
+  },
+  "build": {
+    "default": {
+      "input": "dist/cli.js",
+      "output": "dist/jsb",
+      "name": "jsb"
+    }
+  },
+  "dependencies": {
+    "@burro69/helpers": "0.1.0",
+    "@burro69/logger": "0.1.0",
+    "@burro69/sadex": "0.1.0",
+    "@fork/microbundle": "0.12.4",
+    "nexe": "^3.3.7"
+  },
+  "peerDependencies": {},
+  "devDependencies": {}
+}
