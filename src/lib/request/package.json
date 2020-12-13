@@ -1,0 +1,22 @@
+{
+  "name": "@burro69/request",
+  "description": "burro69 fetch plus plus",
+  "version": "0.1.0",
+  "license": "MIT",
+  "author": "Philippe Gensane",
+  "keywords": [],
+  "main": "dist/request.js",
+  "module":"dist/request.mjs",
+  "esmodule":"dist/request.mjs",
+  "source":"src/index.mjs",
+  "scripts": {
+    "lint": "eslint src/**/*",
+    "build": "macrobundle -f cjs,modern --target node --no-sourcemap --raw --no-compress"
+  },
+  "files": [
+    "dist/",
+    "src/"
+  ],
+  "peerDependencies": {
+  }
+}
