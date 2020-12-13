@@ -3,6 +3,8 @@
     "Gensane",
     "Longname",
     "Mixins",
+    "arrayified",
+    "arrayify",
     "browserslist",
     "camelcase",
     "cfgfile",
@@ -12,10 +14,13 @@
     "eqeqeq",
     "esmodule",
     "linenums",
+    "loadconfig",
     "macrobundle",
+    "middlewares",
     "monospace",
     "multiline",
     "preact",
+    "sadejs",
     "sadex",
     "typedefs",
     "xpreact"
@@ -124,5 +129,11 @@
   "editor.maxTokenizationLineLength": 200000,
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "markdownlint.config": {
+    "default": true,
+    "MD013": false,
+    "MD025": false,
+    "MD007": { "indent": 4 }
   }
 }

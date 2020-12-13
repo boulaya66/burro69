@@ -1,0 +1,35 @@
+{
+  "name": "@burro69/sadex",
+  "version": "0.1.0",
+  "description": "sadejs extensions",
+  "author": "Philippe Gensane",
+  "license": "MIT",
+  "keywords": [
+    "sade",
+    "cli"
+  ],
+  "main": "./dist/sadex.js",
+  "module": "./dist/sadex.mjs",
+  "esmodule": "./dist/sadex.mjs",
+  "source": "./src/index.mjs",
+  "scripts": {
+    "test": "node test/test.mjs",
+    "lint": "eslint src/**/*.mjs",
+    "doc": "jsdoc -c jsdoc.json",
+    "bundle": "jsb b --config --cfgfile jsb.json"
+  },
+  "files": [
+    "src/",
+    "dist/",
+    "test/",
+    "jsdoc.json"
+  ],
+  "dependencies": {
+    "@burro69/helpers": "0.1.0",
+    "@burro69/logger": "0.1.0",
+    "sade": "^1.7.4"
+  },
+  "devDependencies": {
+  },
+  "peerDependencies": {}
+}

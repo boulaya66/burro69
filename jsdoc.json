@@ -2,7 +2,8 @@
     "source": {
         "include": [
             "src/lib/helpers/src",
-            "src/lib/logger/src"
+            "src/lib/logger/src",
+            "src/lib/sadex/src"
         ],
         "includePattern": ".+\\.(m)?js(doc|x)?$",
         "_excludePattern": "(node_modules/|doc|tests|data)"
