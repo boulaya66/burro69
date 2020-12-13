@@ -1,0 +1,27 @@
+{
+  "name": "@burro69/store",
+  "description": "burro69 global store",
+  "version": "0.1.0",
+  "license": "MIT",
+  "author": "Philippe Gensane",
+  "keywords": [],
+  "main": "dist/store.js",
+  "module":"dist/store.mjs",
+  "esmodule":"dist/store.mjs",
+  "source":"src/index.mjs",
+  "scripts": {
+    "lint": "eslint src/**/*",
+    "build": "macrobundle -f cjs,modern --target node --no-sourcemap --raw --no-compress"
+  },
+  "files": [
+    "dist/",
+    "src/"
+  ],
+  "dependencies": {
+    "@burro69/helpers": "0.1.0"
+  },
+  "devDependencies": {
+  },
+  "peerDependencies": {
+  }
+}

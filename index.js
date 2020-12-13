@@ -1,5 +1,3 @@
-// TODO install main dirs
-// TODO gitignore && git
 // TODO install other libs and commits
 
 const pkg = require('./package.json');

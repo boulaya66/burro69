@@ -8,6 +8,7 @@
     "browserslist",
     "camelcase",
     "cfgfile",
+    "createstore",
     "docdash",
     "docstrap",
     "endregion",
@@ -23,6 +24,7 @@
     "sadejs",
     "sadex",
     "typedefs",
+    "withdefercommit",
     "xpreact"
   ],
   "terminal.integrated.fontSize": 12,
