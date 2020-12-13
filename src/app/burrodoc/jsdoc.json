@@ -1,0 +1,77 @@
+{
+    "source": {
+        "include": [
+            "src"
+        ],
+        "includePattern": "\\.(m)?js$",
+        "excludePattern": "(node_modules/)"
+    },
+    "sourceType": "module",
+    "tags": {
+        "allowUnknownTags": true
+    },
+    "plugins": [
+        "plugins/markdown",
+        "../../../node_modules/better-docs/typedef-import",
+        "../../../node_modules/better-docs/category",
+        "../../../node_modules/better-docs/component"
+    ],
+    "templates": {
+        "cleverLinks": true,
+        "monospaceLinks": true,
+        "search": true,
+        "default": {
+            "staticFiles": {
+                "include": []
+            }
+        },
+        "systemName": "@burro69/doc",
+        "copyright": "@burro69/doc documentation - Philippe Gensane - 2020",
+        "includeDate": true,
+        "navType": "inline",
+        "theme": "Cerulean",
+        "linenums": true,
+        "collapseSymbols": true,
+        "inverseNav": true,
+        "outputSourceFiles": true,
+        "outputSourcePath": true,
+        "dateFormat": "dddd Do MMMM YYYY, HH:mm:ss",
+        "syntaxTheme": "dark",
+        "sort": true,
+        "better-docs": {
+            "name": "@burro69/doc",
+            "logo": "",
+            "title": "@burro69/doc",
+            "css": "",
+            "trackingCode": "tracking-code-which-will-go-to-the-HEAD",
+            "hideGenerator": false,
+            "navLinks": [
+                {
+                    "label": "Github",
+                    "href": "https://github.com/"
+                }
+            ]
+        }
+    },
+    "opts": {
+        "encoding": "utf8",
+        "verbose": true,
+        "destination": "doc",
+        "recurse": true,
+        "template-docstrap": "../../../node_modules/ink-docstrap/template",
+        "template-docdash": "../../../node_modules/docdash",
+        "template-better": "../../../node_modules/better-docs",
+        "template": "../../../node_modules/ink-docstrap/template"
+    },
+    "docdash": {
+        "static": true,
+        "sort": true,
+        "meta": {
+            "title": "@burro69/doc"
+        },
+        "search": true,
+        "collapse": true,
+        "wrap": true,
+        "typedefs": false
+    }
+}

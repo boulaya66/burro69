@@ -1,0 +1,9 @@
+{
+  "name": "burrodoc",
+  "version": "0.1.0",
+  "main": "src/index.mjs",
+  "license": "MIT",
+  "scripts": {
+    "doc": "jsdoc -c jsdoc.json"
+  }
+}
