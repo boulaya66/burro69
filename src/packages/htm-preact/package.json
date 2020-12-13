@@ -1,0 +1,28 @@
+{
+  "name": "@xpreact/hpreact",
+  "description": "xpreact: preact + htm",
+  "version": "0.1.0",
+  "license": "MIT",
+  "author": "Philippe Gensane",
+  "keywords": [],
+  "main": "dist/hpreact.js",
+  "module": "dist/hpreact.mjs",
+  "esmodule": "dist/hpreact.mjs",
+  "source": "src/index.mjs",
+  "scripts": {
+    "lint": "eslint src/**/*",
+    "build": "microbundle -f cjs,modern --target node --no-sourcemap --raw --no-compress"
+  },
+  "files": [
+    "dist/",
+    "src/"
+  ],
+  "dependencies": {
+    "htm": "^3.0.4",
+    "preact": "^10.5.7"
+  },
+  "devDependencies": {
+  },
+  "peerDependencies": {
+  }
+}

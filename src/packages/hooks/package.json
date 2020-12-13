@@ -1,0 +1,29 @@
+{
+  "name": "@xpreact/hooks",
+  "description": "xpreact: preact hooks",
+  "version": "0.1.0",
+  "license": "MIT",
+  "author": "Philippe Gensane",
+  "keywords": [],
+  "main": "dist/hooks.js",
+  "module": "dist/hooks.mjs",
+  "esmodule": "dist/hooks.mjs",
+  "source": "src/index.mjs",
+  "scripts": {
+    "lint": "eslint src/**/*",
+    "build": "microbundle -f cjs,modern --target node --no-sourcemap --raw --no-compress"
+  },
+  "files": [
+    "dist/",
+    "src/"
+  ],
+  "dependencies": {
+    "@burro69/helpers": "0.1.0",
+    "@burro69/store": "0.1.0",
+    "preact": "^10.5.7"
+  },
+  "devDependencies": {
+  },
+  "peerDependencies": {
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "name": "@xpreact/router",
+  "description": "xpreact: router",
+  "version": "0.1.0",
+  "license": "MIT",
+  "author": "Philippe Gensane",
+  "keywords": [],
+  "main": "dist/router.js",
+  "module":"dist/router.mjs",
+  "esmodule":"dist/router.mjs",
+  "source":"src/index.mjs",
+  "scripts": {
+    "lint": "eslint src/**/*",
+    "build": "microbundle -f cjs,modern --target node --no-sourcemap --raw --no-compress"
+  },
+  "files": [
+    "dist/",
+    "src/"
+  ],
+  "dependencies": {
+    "@xpreact/hpreact": "0.1.0",
+    "preact": "^10.5.7",
+    "preact-router": "latest"
+  },
+  "devDependencies": {
+  },
+  "peerDependencies": {
+  }
+}

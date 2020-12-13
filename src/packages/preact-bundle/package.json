@@ -1,0 +1,32 @@
+{
+  "name": "@xpreact/bundle",
+  "description": "xpreact bundle",
+  "version": "0.1.0",
+  "license": "MIT",
+  "author": "Philippe Gensane",
+  "keywords": [],
+  "main": "dist/xpreact.js",
+  "module":"dist/xpreact.mjs",
+  "esmodule":"dist/xpreact.mjs",
+  "source":"src/index.mjs",
+  "scripts": {
+    "lint": "eslint src/**/*",
+    "build": "microbundle -f cjs,modern --target node --no-sourcemap --raw --no-compress --external none"
+  },
+  "files": [
+    "dist/",
+    "src/"
+  ],
+  "dependencies": {
+    "@burro69/helpers": "0.1.0",
+    "@burro69/request": "0.1.0",
+    "@burro69/store": "0.1.0",
+    "@xpreact/hooks": "0.1.0",
+    "@xpreact/hpreact": "0.1.0",
+    "@xpreact/router": "0.1.0",
+    "preact": "^10.5.7",
+    "htm": "^3.0.4"
+  },
+  "peerDependencies": {
+  }
+}
