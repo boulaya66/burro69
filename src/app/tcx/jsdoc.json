@@ -1,0 +1,77 @@
+{
+    "source": {
+        "include": [
+            "src"
+        ],
+        "includePattern": "\\.(m)?js$",
+        "excludePattern": "(node_modules/|doc|test)"
+    },
+    "sourceType": "module",
+    "tags": {
+        "allowUnknownTags": true
+    },
+    "plugins": [
+        "plugins/markdown",
+        "../../../node_modules/better-docs/typedef-import",
+        "../../../node_modules/better-docs/category",
+        "../../../node_modules/better-docs/component"
+    ],
+    "templates": {
+        "cleverLinks": true,
+        "monospaceLinks": true,
+        "search": true,
+        "default": {
+            "staticFiles": {
+                "include": []
+            }
+        },
+        "systemName": "tcx",
+        "copyright": "tcx documentation - Philippe Gensane - 2020",
+        "includeDate": true,
+        "navType": "inline",
+        "theme": "Cerulean",
+        "linenums": true,
+        "collapseSymbols": true,
+        "inverseNav": true,
+        "outputSourceFiles": true,
+        "outputSourcePath": true,
+        "dateFormat": "dddd Do MMMM YYYY, HH:mm:ss",
+        "syntaxTheme": "dark",
+        "sort": true,
+        "better-docs": {
+            "name": "tcx",
+            "logo": "",
+            "title": "tcx",
+            "css": "",
+            "trackingCode": "tracking-code-which-will-go-to-the-HEAD",
+            "hideGenerator": false,
+            "navLinks": [
+                {
+                    "label": "Github",
+                    "href": "https://github.com/"
+                }
+            ]
+        }
+    },
+    "opts": {
+        "encoding": "utf8",
+        "verbose": true,
+        "destination": "doc",
+        "recurse": true,
+        "template-docstrap": "../../../node_modules/ink-docstrap/template",
+        "template-docdash": "../../../node_modules/docdash",
+        "template-better": "../../../node_modules/better-docs",
+        "template": "../../../node_modules/ink-docstrap/template"
+    },
+    "docdash": {
+        "static": true,
+        "sort": true,
+        "meta": {
+            "title": "tcx"
+        },
+        "search": true,
+        "collapse": true,
+        "wrap": true,
+        "typedefs": true
+    }
+}

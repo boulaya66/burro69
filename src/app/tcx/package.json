@@ -1,0 +1,57 @@
+{
+  "name": "tcx",
+  "description": "TCX tool set",
+  "version": "0.1.0",
+  "license": "MIT",
+  "author": "Philippe Gensane",
+  "keywords": [
+    "tcx",
+    "strava",
+    "garmin"
+  ],
+  "main": "dist/tcx.js",
+  "module": "dist/tcx.mjs",
+  "esmodule": "dist/tcx.mjs",
+  "source": "src/cli.mjs",
+  "bin": {
+    "tcx": "dist/tcx.mjs"
+  },
+  "scripts": {
+    "tcx": "node src/cli.mjs",
+    "tcx:i": "yarn bundle && echo Install $INIT_CWD && yarn global add file:$INIT_CWD",
+    "tcx:wi": "yarn bundle && echo Install %INIT_CWD% && yarn global add file:%INIT_CWD%",
+    "tcx:r": "yarn global remove tcx",
+    "lint": "eslint src/**/*.mjs",
+    "build": "jsb c --config windows,linux --cfgfile jsb.json",
+    "build:win": "jsb c --config windows --cfgfile jsb.json",
+    "build:linux": "yarn bundle:linux && jsb c --config linux --cfgfile jsb.json",
+    "bundle": "jsb b --config --cfgfile jsb.json",
+    "bundle:linux":"dos2unix dist/tcx.js && dos2unix dist/tcx.mjs",
+    "doc": "jsdoc -c jsdoc.json"
+  },
+  "files": [
+    "src/",
+    "dist/"
+  ],
+  "preferGlobal": true,
+  "dependencies": {
+    "@burro69/logger": "0.1.0",
+    "@burro69/sadex": "0.1.0",
+    "@fork/xml2js": "^0.4.23"
+  },
+  "devDependencies": {},
+  "peerDependencies": {},
+  "bundle": {
+    "default": {
+      "output": "${dir}/${name}${format}",
+      "external": "none"
+    }
+  },
+  "build": {
+    "default": {
+      "output": "${dir}/${name}",
+      "input": "dist/cli.js",
+      "name": "tcx"
+    }
+  }
+}

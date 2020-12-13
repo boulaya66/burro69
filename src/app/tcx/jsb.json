@@ -1,0 +1,13 @@
+{
+    "name": "tcx",
+    "bundle": {
+        "default": {
+            "external": "none"
+        }
+    },
+    "build": {
+        "default": {
+            "input": "dist/tcx.js"
+        }
+    }
+}
