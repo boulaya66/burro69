@@ -1,0 +1,128 @@
+{
+  "cSpell.words": [
+    "Gensane",
+    "Longname",
+    "Mixins",
+    "browserslist",
+    "camelcase",
+    "cfgfile",
+    "docdash",
+    "docstrap",
+    "endregion",
+    "eqeqeq",
+    "esmodule",
+    "linenums",
+    "macrobundle",
+    "monospace",
+    "multiline",
+    "preact",
+    "sadex",
+    "typedefs",
+    "xpreact"
+  ],
+  "terminal.integrated.fontSize": 12,
+  "editor.fontSize": 14,
+  "eslint.packageManager": "yarn",
+  "workbench.panel.defaultLocation": "right",
+  // Migrated from previous "File | Auto Save" setting:
+  "files.autoSave": "afterDelay",
+  "todo-tree.filtering.excludeGlobs": ["**/dist/", "node_modules", "data"],
+  "editor.fontFamily": "'Hasklig, Medium','Fira Code','Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+  "editor.fontLigatures": true,
+  "editor.tokenColorCustomizations": {
+    "comments": "#949090",
+    "textMateRules": [
+      {
+        "scope": ["variable.parameter"],
+        "settings": {
+          "fontStyle": "italic",
+          "foreground": "#dd4848"
+        }
+      },
+      {
+        "scope": [
+          //following will be in italic (=FlottFlott)
+          "comment",
+          "entity.name.type.class", //class names
+          "keyword", //import, export, return
+          "constant", //String, Number, Boolean, this, super
+          "storage.modifier", //static keyword
+          "storage.type.class.js" //class keyword
+        ],
+        "settings": {
+          "fontStyle": "italic"
+        }
+      },
+      {
+        "scope": [
+          //following will be excluded from italics (VSCode has some defaults for italics)
+          "invalid",
+          "keyword.operator",
+          "constant.numeric.css",
+          "keyword.other.unit.px.css",
+          "constant.numeric.decimal.js",
+          "constant.numeric.json"
+        ],
+        "settings": {
+          "fontStyle": ""
+        }
+      }
+    ]
+  },
+  "javascript.referencesCodeLens.enabled": true,
+  "javascript.referencesCodeLens.showOnAllFunctions": true,
+  "js/ts.implicitProjectConfig.checkJs": true,
+  "print.editorTitleMenuButton": true,
+  "todo-tree.general.tags": ["BUG", "HACK", "FIXME", "TODO"],
+  "todo-tree.highlights.customHighlight": {
+    "BUG": {
+      "icon": "bug"
+    },
+    "FIXME": {
+      "icon": "flame"
+    }
+  },
+  "workbench.iconTheme": "material-icon-theme",
+  // Encodage du jeu de caractères par défaut à utiliser durant la lecture et l'écriture des fichiers.
+  "files.encoding": "utf8",
+  "editor.wordWrap": "on",
+  // Contrôle si la minicarte est affichée
+  "editor.minimap.enabled": true,
+  "typescript.validate.enable": false,
+  "typescript.format.enable": false,
+  "javascript.validate.enable": false,
+  "editor.minimap.scale": 2,
+  "workbench.sideBar.location": "right",
+  "workbench.activityBar.visible": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "debug.console.fontSize": 12,
+  "terminal.integrated.shell.linux": "",
+  "window.restoreWindows": "all",
+  "workbench.colorCustomizations": {
+    "[Monokai Dimmed]": {
+      "activityBar.activeBorder": "#00c3ff",
+      "activityBar.activeFocusBorder": "#ff0000"
+    }
+  },
+  "terminal.integrated.fontFamily": "'Hasklig Medium'",
+  "[javascript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "eslint.alwaysShowStatus": true,
+  "xml.symbols.maxItemsComputed": 100000,
+  "[xml]": {
+    "editor.autoClosingBrackets": "never",
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": false
+  },
+  "editor.maxTokenizationLineLength": 200000,
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
+}

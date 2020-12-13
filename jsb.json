@@ -1,0 +1,32 @@
+{
+    "bundle": {
+        "default": {
+            "format": [
+                "modern",
+                "cjs"
+            ],
+            "target": "node",
+            "raw": true,
+            "compress": false,
+            "sourcemap": false,
+            "formats": {
+                "modern": ".mjs",
+                "cjs": ".js",
+                "es": ".es.mjs"
+            },
+            "output": "${dir}/${name}${format}"
+        }
+    },
+    "build": {
+        "default": {
+            "output": "${dir}/${name}",
+            "target": "windows-x64-14.5.0"
+        },
+        "linux": {
+            "target": "linux-x64-12.16.2"
+        },
+        "windows": {
+            "target": "windows-x64-14.5.0"
+        }
+    }
+}

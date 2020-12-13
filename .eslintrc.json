@@ -1,0 +1,58 @@
+{
+    "root": true,
+    "env": {
+        "browser": true,
+        "es2021": true,
+        "node": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:json/recommended"
+    ],
+    "parserOptions": {
+        "ecmaVersion": 12,
+        "sourceType": "module"
+    },
+    "ignorePatterns": [
+        "dist/*",
+        "node_modules/*",
+        "tests/*",
+        "**/dist/*",
+        "fork/*",
+        "*.tcx",
+        "*.txt",
+        "*.xml"
+    ],
+    "plugins": [],
+    "rules": {
+        "eqeqeq": "warn",
+        "indent": [
+            "error",
+            4,
+            {
+                "SwitchCase": 1
+            }
+        ],
+        "semi": [
+            "error",
+            "always",
+            {
+                "omitLastInOneLineBlock": true
+            }
+        ],
+        "curly": [
+            "error",
+            "multi-or-nest",
+            "consistent"
+        ],
+        "multiline-ternary": [
+            "warn",
+            "always-multiline"
+        ],
+        "camelcase": "error",
+        "comma-style": [
+            "error",
+            "last"
+        ],
+        "no-control-regex": "off"
+    }}

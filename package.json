@@ -1,0 +1,88 @@
+{
+  "name": "burro69",
+  "description": "burro69 monorepo",
+  "version": "0.1.0",
+  "license": "MIT",
+  "author": {
+    "name": "Philippe Gensane",
+    "email": "burro69@orange.fr",
+    "url": "http://localhost:8080"
+  },
+  "repository": {},
+  "keywords": [],
+  "main": "index.js",
+  "scripts": {
+    "wk": "yarn workspace",
+    "wsi": "yarn workspaces info",
+    "ws": "yarn workspaces run",
+    "lint": "eslint src/**/* tools/**/*",
+    "bundle": "yarn workspaces run bundle",
+    "build": "yarn workspaces run build",
+    "doc": "jsdoc -c jsdoc.json"
+  },
+  "engines": {
+    "node": ">= 14.0.0",
+    "npm": ">=6.0.0",
+    "yarn": ">=1.22.0"
+  },
+  "browserslist": [
+    "last 2 versions"
+  ],
+  "files": [
+    ".vscode/",
+    "src/",
+    "tools/",
+    "tests/",
+    ".eslintrc.json",
+    "jsb.json",
+    "jsdoc.json",
+    "doc/doc-src"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^7.15.0",
+    "eslint-plugin-json": "^2.1.2",
+    "chalk": "^4.1.0",
+    "jsdoc": "^3.6.6",
+    "better-docs": "^2.3.2",
+    "docdash": "^1.2.0",
+    "ink-docstrap": "^1.3.2"
+  },
+  "private": true,
+  "workspaces": [
+    "src/lib/*",
+    "src/packages/*",
+    "src/app/*",
+    "tools/*"
+  ],
+  "bundle": {
+    "default": {
+      "format": [
+        "modern",
+        "cjs"
+      ],
+      "target": "node",
+      "raw": true,
+      "compress": false,
+      "sourcemap": false,
+      "formats": {
+        "modern": ".mjs",
+        "cjs": ".js",
+        "es": ".es.mjs"
+      },
+      "output": "${dir}/${config}${format}"
+    }
+  },
+  "build": {
+    "default": {
+      "output": "${dir}/${name}",
+      "target": "windows-x64-14.5.0"
+    },
+    "linux": {
+      "target": "linux-x64-12.16.2"
+    },
+    "windows": {
+      "target": "windows-x64-14.5.0"
+    }
+  }
+}

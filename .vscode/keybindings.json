@@ -1,0 +1,25 @@
+[
+  {
+    "key": "ctrl+f9",
+    "command": "workbench.action.tasks.runTask"
+  },
+  {
+    "key": "shift+f9",
+    "command": "workbench.action.tasks.terminate"
+  },
+  {
+    "key": "alt+f9",
+    "command": "workbench.action.tasks.configureTaskRunner"
+  },
+  {
+    "key": "ctrl+shift+t",
+    "command": "workbench.action.terminal.toggleTerminal"
+  },
+  {
+    "key": "shift+alt+t",
+    "command": "workbench.action.terminal.newWithCwd",
+    "args": {
+      "cwd": "${fileDirname}"
+    }
+  }
+]

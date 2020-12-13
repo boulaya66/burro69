@@ -1,0 +1,23 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# workspace specific
+data/
+dist/
+doc/*
+!doc/doc-src/
+src/**/dist
+src/**/doc
+!**/doc/doc-src
+src/lib/helpers
+
+# Dependency directories
+node_modules/
+
+# Yarn Integrity file
+.yarn-integrity
