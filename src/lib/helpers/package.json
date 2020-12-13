@@ -1,0 +1,24 @@
+{
+  "name": "@burro69/helpers",
+  "description": "burro69 helper functions",
+  "version": "0.1.0",
+  "license": "MIT",
+  "author": "Philippe Gensane",
+  "keywords": [],
+  "main": "dist/helpers.js",
+  "module": "dist/helpers.mjs",
+  "esmodule": "dist/helpers.mjs",
+  "source": "src/index.mjs",
+  "scripts": {
+    "lint": "eslint src/**/*",
+    "build": "macrobundle -f cjs,modern --target node --no-sourcemap --raw --no-compress",
+    "doc": "jsdoc -c jsdoc.json",
+    "bundle": "jsb b --config --cfgfile jsb.json"
+  },
+  "files": [
+    "dist/",
+    "src/",
+    "jsdoc.json"
+  ],
+  "peerDependencies": {}
+}

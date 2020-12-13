@@ -14,7 +14,6 @@ doc/*
 src/**/dist
 src/**/doc
 !**/doc/doc-src
-src/lib/helpers
 
 # Dependency directories
 node_modules/
