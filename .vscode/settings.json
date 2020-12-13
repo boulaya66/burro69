@@ -2,6 +2,7 @@
   "cSpell.words": [
     "Gensane",
     "Longname",
+    "MICROBUNDLE",
     "Mixins",
     "arrayified",
     "arrayify",
@@ -14,6 +15,7 @@
     "endregion",
     "eqeqeq",
     "esmodule",
+    "iife",
     "linenums",
     "loadconfig",
     "macrobundle",
