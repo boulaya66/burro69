@@ -24,6 +24,7 @@ This module adds a number of functionalities to sade.js :
     - [sadex()](#sadex)
     - [Sadex class](#sadex-class)
     - [Middlewares](#middlewares)
+    - [Print Command](#optional-print-command)
 - [License](#license)
 
 # Install
@@ -46,13 +47,13 @@ yarn add @burro69/sadex
 
 The main entry point of the module is the static function
 
-```typescript
+```javascript
 sadex(name:String, isSingle:Boolean):Sadex
 ```
 
 which returns a new instance of Sadex class.
 
-See [code documentation](./module-@burro69_sadex.html#sadex) for more information.
+See [code documentation](./@burro69_sadex.html#sadex) for more information.
 
 ## Sadex class
 
@@ -96,7 +97,25 @@ A number of predefined middlewares are provided within the module.
 - extractSubOptions: processes a whole set of comma separated options and add them to the ``options`` argument.
 - loadConfigMiddleware: loads ``options`` in a the specified config file.
 
-See [code documentation](./module-@burro69_sadex.html#arrayifyOption) for more information.
+See [code documentation](./@burro69_sadex_middlewares.html#arrayifyOption) for more information.
+
+## Optional print command
+
+An optional [print command](./@burro69_sadex.html#cmdPrint) is also exported by the module.
+
+This command allows to save all commands help in html or markdown format. If markdown format is
+chosen, then the output can also be automatically merged with a readme.md file.
+
+```javascript
+import { sadex, printCommand } from '@burro69/sadex';
+
+const prog = sadex('',false);
+
+prog
+    ...
+    .command(printCommand)
+    .parse(process.argv);
+```
 
 # License
 

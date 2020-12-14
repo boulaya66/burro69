@@ -1,8 +1,10 @@
+//#region imports
 /**
- * @memberof module:@burro69/sadex
- * @file @burro69/sadex: Config middlewares
+ * import external dependencies
+ * @private
  */
-'use strict';
+import path from 'path';
+import { mergeObjects, getJsonFileKeys } from '@burro69/helpers';
 
 /**
 * Import non prefixed typedefs
@@ -10,13 +12,13 @@
 * - for vscode: this allows intellisense work properly with jsdoc types
 */
 import './typedefs.js';
+//#endregion
 
 /**
- * import external dependencies
- * @private
+ * memberof module:@burro69/sadex
+ * file @burro69/sadex: Config middlewares
  */
-import path from 'path';
-import { mergeObjects, /* getPackageJsonKeys, */ getJsonFileKeys } from '@burro69/helpers';
+'use strict';
 
 /**
  * Sadex middleware: process an array of options and inject then in args

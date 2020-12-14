@@ -1,9 +1,53 @@
+//#region external dependencies
+/**
+ * Node.js builtin module: path
+ * @external path
+ * @see {@link https://nodejs.org/dist/latest-v15.x/docs/api/path.html|node.js path documentation}
+ */
+/**
+ * Node.js builtin module: fs/promises
+ * @external fs
+ * @see {@link https://nodejs.org/dist/latest-v15.x/docs/api/fs.html|node.js fs documentation}
+ */
+/**
+ * External dependency: sade
+ * @external sade
+ * @see {@link https://github.com/lukeed/sade/blob/master/readme.md|sade.js}
+ */
+/**
+ * ansi-to-html external dependency
+ * @external ansi-to-html
+ * @see {@link https://github.com/rburns/ansi-to-html|ansi-to-html documentation}
+ */
+//#endregion
+
+//#region  namespaces
 /**
  * @memberof module:@burro69/sadex
  * @file @burro69/sadex/typedefs
- * @namespace @burro69/sadex/middlewares
+ * 
+ * This namespace exports:
+ * - {@link sadex}: main entry of the {@link module:@burr69/sadex|module}
+ * - {@link Sadex}: the class extending {@link Sade}
+ * - {@link printCommand}: the optional print command
+ * @namespace @burro69/sadex
  */
 
+/**
+ * @memberof module:@burro69/sadex
+ * @file @burro69/sadex/typedefs
+ * 
+ * This namespace exports:
+ * - {@link concatOption}: Concat option middleware
+ * - {@link arrayifyOption}: Arrayify option middleware
+ * - {@link extractOption}: Extract option middleware
+ * - {@link extractSubOptions}: Extract sub-options middleware
+ * - {@link loadConfigMiddleware}: Load config middleware
+ * @namespace @burro69/sadex/middlewares
+ */
+//#endregion
+
+//#region typedefs
 /**
 * Export non prefixed typedefs
 * - for jsdoc: this ensures that all links and types will be parsed
@@ -91,5 +135,6 @@
  * steps.
   * @memberof @burro69/sadex/middlewares
 */
+//#endregion
 
 //___EOF___

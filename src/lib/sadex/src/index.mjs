@@ -1,30 +1,15 @@
 //#region imports
 /**
  * import external dependencies
- */
-/**
- * Node.js builtin module: path
- * @external path
- * @see {@link https://nodejs.org/dist/latest-v15.x/docs/api/path.html|node.js path documentation}
+ * @private
  */
 import path from 'path';
-/**
- * External dependency: sade
- * @external sade
- * @see {@link https://github.com/lukeed/sade/blob/master/readme.md|sade.js}
- */
 import sade from 'sade';
 import { log } from '@burro69/logger';
 import { isString, isArray, isFunction, isObject, cloneObject, getPackageJson } from '@burro69/helpers';
-import {
-    concatOption,
-    extractOption,
-    arrayifyOption,
-} from './middlewares.mjs';
-import {
-    extractSubOptions,
-    loadConfigMiddleware
-} from './loadconfig.mjs';
+import { concatOption, extractOption, arrayifyOption, } from './middlewares.mjs';
+import { extractSubOptions, loadConfigMiddleware } from './loadconfig.mjs';
+import printCommand from './cmdPrint.mjs';
 
 /**
  * Import non-prefixed typedefs
@@ -51,23 +36,46 @@ const Sade = sade('', false).constructor;
  * @version 0.1.0
  * @author Philippe Gensane
  * @license MIT
- * @todo test steps
- * @todo split index.mjs && create sadex namespace
+ * 
  * @requires path
  * @requires sade
  * @requires @burro69/logger
  * @requires @burro69/helpers
- * @exports Sadex
- * @exports sadex
- * @exports concatOption
- * @exports arrayifyOption
- * @exports extractOption
- * @exports extractSubOptions
- * @exports loadConfigMiddleware
-*/
+ * 
+ * @see {@link sadex}: Main module entry point
+ * @see {@link Sadex}: Class Sadex
+ * @see {@link concatOption}: Concat option middleware
+ * @see {@link arrayifyOption}: Arrayify option middleware
+ * @see {@link extractOption}: Extract option middleware
+ * @see {@link extractSubOptions}: Extract sub-options middleware
+ * @see {@link loadConfigMiddleware}: Load config middleware
+ * @see {@link printCommand}: Print optional command
+ * 
+ * @todo test steps
+ * @todo split index.mjs && create sadex namespace
+ * @example <caption>Usage: <code>cli-app cmd [options]</code></caption>
+ * const prog = sadex('cli app, false);
+ * prog
+ *     .command('cmd <required> [optional]')
+ *     .describe('cli app cmd command')
+ *     .alias('c')
+ *     .option('-o, --output', 'Change output file path', 'out.txt')
+ *     .example('cmd source.txt -o dest.txt)
+ *     .parseAsync(process.argv)
+ *     .then(()=>console.log('cmd success'))
+ *     .catch(console.error);
+ */
 // TODO: test steps
 
 'use strict';
+
+/**
+* Import non prefixed typedefs
+* - for jsdoc: this ensures that all links and types will be parsed
+* - for vscode: this allows intellisense work properly with jsdoc types
+*/
+import './typedefs.js';
+
 
 //#region Class Sadex
 /**
@@ -88,6 +96,7 @@ const Sade = sade('', false).constructor;
  * all methods return `this` except specified.
  * @alias Sadex
  * @memberof module:@burro69/sadex
+ * @memberof @burro69/sadex
  * @extends Sade
  * @see {@link https://github.com/lukeed/sade/blob/master/readme.md|sade.js}
  */
@@ -680,6 +689,7 @@ function wordwrap(str, width, pad, padding = ' ') {
  * Create a new {@link Sadex} instance and auto configure cli name & ver.
  * @alias sadex
  * @memberof module:@burro69/sadex
+ * @memberof @burro69/sadex
  * @see {@link Sadex Sadex extensions}: #005: auto configure cli name & ver
  * @param {string} str - The name of the cli app. If not provided, auto-configure with package.json.
  * @param {boolean} [isOne] - True if cli app is a single command app, false otherwise (default false) .
@@ -718,7 +728,8 @@ export {
     arrayifyOption,
     extractSubOptions,
     loadConfigMiddleware,
-    sadex
+    sadex,
+    printCommand
 };
 export * from './typedefs.js';
 //#endregion

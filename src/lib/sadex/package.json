@@ -27,9 +27,9 @@
   "dependencies": {
     "@burro69/helpers": "0.1.0",
     "@burro69/logger": "0.1.0",
+    "ansi-to-html": "^0.6.14",
     "sade": "^1.7.4"
   },
-  "devDependencies": {
-  },
+  "devDependencies": {},
   "peerDependencies": {}
 }

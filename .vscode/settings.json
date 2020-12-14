@@ -67,7 +67,7 @@
   "workbench.panel.defaultLocation": "right",
   // Migrated from previous "File | Auto Save" setting:
   "files.autoSave": "afterDelay",
-  "todo-tree.filtering.excludeGlobs": ["**/dist/", "node_modules", "data"],
+  "todo-tree.filtering.excludeGlobs": ["**/dist/", "node_modules", "data","**/doc/*"],
   "editor.fontFamily": "'Hasklig, Medium','Fira Code','Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
   "editor.fontLigatures": true,
   "editor.tokenColorCustomizations": {
@@ -170,6 +170,11 @@
     "default": true,
     "MD013": false,
     "MD025": false,
-    "MD007": { "indent": 4 }
-  }
+    "MD007": { "indent": 4 },
+    "MD033": false
+  },
+  "cSpell.language": "en,fr,fr-FR,en-GB,en-US",
+  "cSpell.enableFiletypes": [
+    "!json"
+  ]
 }

@@ -1,9 +1,4 @@
-/**
- * @memberof module:@burro69/sadex
- * @file @burro69/sadex: Common middlewares
- */
-'use strict';
-
+//#region imports
 /**
  * Import non prefixed typedefs
  * 
@@ -12,6 +7,13 @@
  * - for vscode: this allows intellisense work properly with jsdoc types
  */
 import './typedefs.js';
+//#endregion
+
+/**
+ * memberof module:@burro69/sadex
+ * file @burro69/sadex: Common middlewares
+ */
+'use strict';
 
 /**
  * Middleware: concat specified first arg with non parsed arguments,
@@ -76,6 +78,7 @@ const arrayifyOption = (key) => {
 
 /**
  * Module export concatOption, extractOption, arrayifyOption
+ * @private
  */
 export {
     concatOption,
