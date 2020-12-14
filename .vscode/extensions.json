@@ -4,11 +4,17 @@
 
 	// List of extensions which should be recommended for users of this workspace.
 	"recommendations": [
+		"ms-ceintl.vscode-language-pack-fr",
 		"dbaeumer.vscode-eslint",
 		"techer.open-in-browser",
 		"PKief.material-icon-theme",
 		"Gruntfuggly.todo-tree",
-		"pdconsec.vscode-print"
+		"pdconsec.vscode-print",
+		"streetsidesoftware.code-spell-checker",
+		"streetsidesoftware.code-spell-checker-french",
+		"donjayamanne.githistory",
+		"eamodio.gitlens",
+		"davidanson.vscode-markdownlint"
 	],
 	// List of extensions recommended by VS Code that should not be recommended for users of this workspace.
 	"unwantedRecommendations": [
