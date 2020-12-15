@@ -7,12 +7,12 @@ yarn-error.log*
 lerna-debug.log*
 
 # workspace specific
-data/
-dist/
+data/*
+dist/*
 doc/*
-!doc/doc-src/
-src/**/dist
-src/**/doc
+!doc/doc-src
+**/dist/
+**/doc/*
 !**/doc/doc-src
 
 # Dependency directories
