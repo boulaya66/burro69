@@ -1,0 +1,58 @@
+{
+    "source": {
+        "include": [
+            "src/lib/sadex/src"
+        ],
+        "includePattern": ".+\\.(m)?js(doc|x)?$",
+        "_excludePattern": "(node_modules/|doc|tests|data)"
+    },
+    "sourceType": "module",
+    "tags": {
+        "allowUnknownTags": true,
+        "dictionaries": [
+            "jsdoc",
+            "closure"
+        ]
+    },
+    "plugins": [
+        "plugins/markdown",
+        "node_modules/better-docs/typedef-import",
+        "node_modules/better-docs/category",
+        "node_modules/better-docs/component",
+        "./tests/testdoc/plugin/plugin.js"
+    ],
+    "templates": {
+        "cleverLinks": false,
+        "monospaceLinks": false,
+        "search": true,
+        "default": {
+            "staticFiles": {
+                "include": []
+            },
+            "useLongnameInNav": true
+        },
+        "systemName": "testdoc",
+        "copyright": "testdoc documentation - Philippe Gensane - 2020",
+        "includeDate": true,
+        "navType": "vertical",
+        "theme": "slate",
+        "linenums": true,
+        "collapseSymbols": false,
+        "inverseNav": true,
+        "outputSourceFiles": true,
+        "outputSourcePath": true,
+        "dateFormat": "dddd Do MMMM YYYY, HH:mm:ss",
+        "syntaxTheme": "dark",
+        "sort": true
+    },
+    "opts": {
+        "encoding": "utf8",
+        "verbose": true,
+        "access": "all",
+        "destination": "doc",
+        "recurse": true,
+        "template": "node_modules/ink-docstrap/template",
+        "readme": "./src/lib/sadex/README.md",
+        "package": "./src/lib/sadex/package.json"
+    }
+}
