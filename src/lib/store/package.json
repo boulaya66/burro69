@@ -9,9 +9,13 @@
   "module":"dist/store.mjs",
   "esmodule":"dist/store.mjs",
   "source":"src/index.mjs",
-  "scripts": {
+  "exports": {
+    "import": "./dist/store.mjs",
+    "require": "./dist/store.js"
+  },
+"scripts": {
     "lint": "eslint src/**/*",
-    "build": "macrobundle -f cjs,modern --target node --no-sourcemap --raw --no-compress"
+    "build": "microbundle -f cjs,modern --target node --no-sourcemap --raw --no-compress"
   },
   "files": [
     "dist/",

@@ -9,9 +9,13 @@
   "module": "dist/logger.mjs",
   "esmodule": "dist/logger.mjs",
   "source": "src/index.mjs",
+  "exports": {
+    "import": "./dist/logger.mjs",
+    "require": "./dist/logger.js"
+  },
   "scripts": {
     "lint": "eslint src/**/*",
-    "build": "macrobundle -f cjs,modern --target node --no-sourcemap --raw --no-compress",
+    "build": "microbundle -f cjs,modern --target node --no-sourcemap --raw --no-compress",
     "doc": "jsdoc -c jsdoc.json",
     "bundle": "jsb b --config --cfgfile jsb.json"
   },

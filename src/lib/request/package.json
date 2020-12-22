@@ -9,9 +9,13 @@
   "module":"dist/request.mjs",
   "esmodule":"dist/request.mjs",
   "source":"src/index.mjs",
+  "exports": {
+    "import": "./dist/request.mjs",
+    "require": "./dist/request.js"
+  },
   "scripts": {
     "lint": "eslint src/**/*",
-    "build": "macrobundle -f cjs,modern --target node --no-sourcemap --raw --no-compress"
+    "build": "microbundle -f cjs,modern --target node --no-sourcemap --raw --no-compress"
   },
   "files": [
     "dist/",

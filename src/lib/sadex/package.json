@@ -12,11 +12,16 @@
   "module": "./dist/sadex.mjs",
   "esmodule": "./dist/sadex.mjs",
   "source": "./src/index.mjs",
+  "exports": {
+    "import": "./dist/sadex.mjs",
+    "require": "./dist/sadex.js"
+  },
   "scripts": {
     "test": "node test/test.mjs",
     "lint": "eslint src/**/*.mjs",
     "doc": "jsdoc -c jsdoc.json",
-    "bundle": "jsb b --config --cfgfile jsb.json"
+    "bundle": "jsb b --config --cfgfile jsb.json",
+    "build": "microbundle -f cjs,modern --target node --no-sourcemap --raw --no-compress"
   },
   "files": [
     "src/",

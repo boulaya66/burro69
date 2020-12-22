@@ -9,9 +9,13 @@
   "module": "dist/helpers.mjs",
   "esmodule": "dist/helpers.mjs",
   "source": "src/index.mjs",
+  "exports": {
+    "import": "./dist/helpers.mjs",
+    "require": "./dist/helpers.js"
+  },
   "scripts": {
     "lint": "eslint src/**/*",
-    "build": "macrobundle -f cjs,modern --target node --no-sourcemap --raw --no-compress",
+    "build": "microbundle -f cjs,modern --target node --no-sourcemap --raw --no-compress",
     "doc": "jsdoc -c jsdoc.json",
     "bundle": "jsb b --config --cfgfile jsb.json"
   },
