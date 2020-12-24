@@ -21,5 +21,62 @@
             "output": "dist/jsb",
             "name": "jsb"
         }
+    },
+    "jsdoc": {
+        "default": {
+            "source": {
+                "include": [
+                    "${workspace}/src"
+                ],
+                "includePattern": ".+\\.(m)?js(doc|x)?$",
+                "_excludePattern": "(node_modules/|doc|tests|data)"
+            },
+            "sourceType": "module",
+            "tags": {
+                "allowUnknownTags": true,
+                "dictionaries": [
+                    "jsdoc",
+                    "closure"
+                ]
+            },
+            "plugins": [
+                "plugins/markdown",
+                "${root}/node_modules/@fork/ink-docstrap/plugin/plugin.js"
+            ],
+            "templates": {
+                "cleverLinks": false,
+                "monospaceLinks": false,
+                "search": true,
+                "default": {
+                    "staticFiles": {
+                        "include": []
+                    },
+                    "useLongnameInNav": true
+                },
+                "systemName": "${name}",
+                "copyright": "${name} documentation - v${version} - Philippe Gensane - 2020",
+                "includeDate": true,
+                "navType": "vertical",
+                "theme": "slate",
+                "linenums": true,
+                "collapseSymbols": false,
+                "inverseNav": true,
+                "outputSourceFiles": true,
+                "outputSourcePath": true,
+                "dateFormat": "dddd Do MMMM YYYY, HH:mm:ss",
+                "syntaxTheme": "dark",
+                "sort": true
+            },
+            "opts": {
+                "encoding": "utf8",
+                "verbose": true,
+                "access": "all",
+                "destination": "${root}/doc",
+                "recurse": true,
+                "template": "${root}/node_modules/@fork/ink-docstrap/template",
+                "readme": "${readme}",
+                "package": "${package}"
+            }
+        }
     }
 }

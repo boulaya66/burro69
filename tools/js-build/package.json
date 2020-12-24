@@ -53,6 +53,9 @@
       "name": "jsb"
     }
   },
+  "jsdoc": {
+    "default": {}
+  },
   "dependencies": {
     "@burro69/helpers": "0.1.0",
     "@burro69/logger": "0.1.0",

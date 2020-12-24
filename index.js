@@ -1,4 +1,7 @@
-// TODO install other libs and commits
+
+// TODO: doc#003 test doc over sadex
+
+// TODO: doc#004 remove testdoc
 
 const pkg = require('./package.json');
 
